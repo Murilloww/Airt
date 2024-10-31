@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+@font-face {
+    font-family: 'Fina';
+    src: url('/fonts/poppins-extralight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --fonte1: 'Nunito', sans-serif;
+    --fonte2: 'Fina', sans-serif;
+    --corObj: #2D0F44;
+    --corFundo: #171717;
+}
+
+body{
+    font-family: var(--fonte1);
+    background-color: var(--corFundo);
+    color: white;
+}
+
+header{
+    background-color: var(--corFundo);
+    padding: 3em;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.267);
+}
+
+p{
+    font-size: 27px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.623);
+    line-height: 2em;
+}
+
+nav{
+    text-align: center;
+}
+
+nav > a{
+    font-size: 20px;
+    font-family: var(--fonte2);
+    color: white;
+    text-decoration: none;
+    padding-inline: 3em;
+}
+
+#hero{
+    background-image: url(/images/black3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.336);
+}
+
+#hero > h1{
+    font-family: var(--fonte2);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4em;
+    font-size: 50px;
+}
+
+.botao{
+    font-family: var(--fonte2);
+    font-size: 25px;
+    padding: 1em;
+    background-color: var(--corObj);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.botao:hover{
+    background-color: #581f85;
+    transition: 0.5s;
+}
+
+.botao-logo{
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+#container{
+    margin-inline: 10em;
+    padding-block: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-block: 6em;
+}
+
+.box{
+    padding: 20px;
+    margin: 5px;
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+#sobre{
+    padding-block: 10em;
+    background-color: #242424;
+}
+
+#sobre > h2{
+    font-family: 'Fina',sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 1.5em;
+}
+
+#sobre > p{
+    margin-inline: 2em;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 15em;
+}
+
+strong{
+    background-color: #2d0f44c9;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.479);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.486);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#contato{
+    padding-bottom: 1em;
+}
+
+#contato > a{
+    text-decoration: none;
+    font-size: 20px;
+    padding-inline: 3em;
+    color: white;
+    align-items: center;
+}
+
+#contato > h2{
+    font-family: 'Fina',sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 1em;
+}
+
+#contato > nav > a > img{
+    padding-inline: 10px;
+    vertical-align: middle;
+}

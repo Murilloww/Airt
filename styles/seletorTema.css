@@ -1,0 +1,81 @@
+body {
+    background-color: #171717;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.tema-container {
+    text-align: center;
+}
+
+.tema-container h1 {
+    font-family: 'Fina', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#select-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-container,
+.button-container {
+    margin: 0 10px;
+    width: 200px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #2d0f44ea;
+    color: white;
+    border: 1px solid var(--corObj);
+    border-radius: 5px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Fina', sans-serif;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+select:focus {
+    border-color: var(--corObj);
+}
+
+select option {
+    color: white;
+}
+
+button {
+    font-family: 'Fina', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    background-color: var(--corObj);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer; 
+    width: 50%; 
+    height: 70px; 
+    box-sizing: border-box; 
+}
+
+button:hover{
+    background-color: #581f85;
+    transition: 0.5s;
+}
+
+select:hover{
+    background-color: #581f85;
+    transition: 0.5s;
+}

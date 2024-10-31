@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/seletorTema.css">
+    <link rel="stylesheet" href="/styles/animation.css">
+</head>
+<body>
+    <main class="tema-container escolhaTema-animation">
+        <h1>Escolha um tema</h1>
+        <div id="select-botao">
+            <div class="select-container geradorTema-animation1">
+                <select id="tema">
+                    <option value="" disabled selected>Selecione um tema</option>
+                    <option value="natureza">Natureza</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="hisotira">Cultura e Historia</option>
+                    <option value="abstrato">Abstrato</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="vidaUrbana">Vida Urbana</option>
+                    <option value="pop">Cultura Pop</option>
+                    <option value="aleatorio">Aleatorio</option>
+                </select>
+            </div>
+                <button class="geradorTema-animation2" onclick="window.location.href='/html/geradorDificuldade.html'">Confirmar</button>
+        </div>
+    </main>
+</body>
+</html>
+<script src="/javascript/geradorTema.js"></script>
