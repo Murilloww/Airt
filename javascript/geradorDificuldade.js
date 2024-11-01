@@ -1,6 +1,6 @@
-document.querySelector('.geradorTema-animation2').addEventListener('click', () => {
-    const complexidadeSelecionada = document.getElementById('tema').value;
-    localStorage.setItem('complexidade', complexidadeSelecionada);
+document.querySelector('#confirmar-dificuldade').addEventListener('click', () => {
+    const complexidadeSelecionada = document.getElementById('dificuldade').value;
+    localStorage.setItem('dificuldade', complexidadeSelecionada);
     window.location.href = '/html/geradorObjecao.html';
   });
   
