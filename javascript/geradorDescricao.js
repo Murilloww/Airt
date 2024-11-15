@@ -1,39 +1,45 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-const tema = localStorage.getItem('tema');
-const dificuldade = localStorage.getItem('dificuldade');
-const objecao = localStorage.getItem('objecao');
+import axios from 'axios';  // Importa a biblioteca axios para fazer requisições HTTP
 
-const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
+export default async function handler(req, res) {
+    // Verifica se a requisição é do tipo POST
+    if (req.method === 'POST') {
+        const { tema, dificuldade, objecao } = req.body;
 
-async function gerarDescricao() {
-    const tema = localStorage.getItem('tema');
-    const dificuldade = localStorage.getItem('dificuldade');
-    const objecao = localStorage.getItem('objecao');
-
-    if (!tema || !dificuldade || !objecao) {
-        console.error('Faltam informações');
-        return;
-    }
-
-    try {
-        const response = await fetch('http://localhost:5500/api/generate-description', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ tema, dificuldade, objecao })
-        });
-
-        if (!response.ok) {
-            throw new Error('Erro ao chamar o servidor');
+        // Verifica se todos os parâmetros necessários foram enviados
+        if (!tema || !dificuldade || !objecao) {
+            return res.status(400).json({ error: 'Parâmetros faltando.' });
         }
 
-        const data = await response.json();
-        document.querySelector('textarea').value = data.descricao;
-    } catch (error) {
-        console.error('Erro:', error);
-        document.querySelector('textarea').value = 'Erro ao gerar descrição. Tente novamente.';
+        // Cria o prompt para a API baseado nas informações
+        const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
+
+        try {
+            // Chama a API Gemini para gerar a descrição com o prompt
+            const response = await axios.post('https://api.gemini.com/v1/generate', {
+                prompt: prompt,  // Passa o prompt gerado para a API
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${process.env.API_KEY}`, // Usando a chave de API da variável de ambiente
+                },
+            });
+
+            // Verifica se a descrição foi retornada na resposta da API
+            const descricao = response.data.descricao;
+
+            if (descricao) {
+                // Retorna a descrição gerada pela API
+                res.status(200).json({ descricao });
+            } else {
+                // Caso a descrição não seja gerada
+                res.status(500).json({ error: 'Descrição não gerada pela API.' });
+            }
+        } catch (error) {
+            console.error('Erro ao chamar a API:', error.message);
+            res.status(500).json({ error: 'Erro ao gerar descrição.' });
+        }
+    } else {
+        // Se a requisição não for POST, retorna erro de método não permitido
+        res.status(405).json({ error: 'Método não permitido.' });
     }
 }
-
-document.addEventListener('DOMContentLoaded', gerarDescricao);
