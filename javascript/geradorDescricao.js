@@ -1,4 +1,4 @@
-import axios from 'axios';  // Importa a biblioteca axios para fazer requisições HTTP
+
 
 export default async function handler(req, res) {
     // Verifica se a requisição é do tipo POST
