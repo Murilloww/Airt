@@ -28,4 +28,5 @@ async function geradorDescricao() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', gerarDescricao);
+document.addEventListener('DOMContentLoaded', geradorDescricao);
+
