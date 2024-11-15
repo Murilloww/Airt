@@ -1,4 +1,4 @@
-async function gerarDescricao() {
+async function geradorDescricao() {
     const tema = localStorage.getItem('tema');
     const dificuldade = localStorage.getItem('dificuldade');
     const objecao = localStorage.getItem('objecao');
