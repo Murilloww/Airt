@@ -1,10 +1,45 @@
-require('dotenv').config();  // Load environment variables from .env file
+require('dotenv').config();  
 import axios from 'axios';
+const cors = require('cors');
+app.use(cors());  // Permite requisições de diferentes origens
 
-// Get the API key from environment variables
-const GEMINI_API_KEY = process.env.API_KEY;
+const {
+    GoogleGenerativeAI,
+    HarmCategory,
+    HarmBlockThreshold,
+  } = require("@google/generative-ai");
+  
+  const apiKey = process.env.GEMINI_API_KEY;
+  const genAI = new GoogleGenerativeAI(apiKey);
+  
+  const model = genAI.getGenerativeModel({
+    model: "gemini-1.5-pro",
+  });
+  
+  const generationConfig = {
+    temperature: 1,
+    topP: 0.95,
+    topK: 40,
+    maxOutputTokens: 8192,
+    responseMimeType: "text/plain",
+  };
+  
+  async function run() {
+    const chatSession = model.startChat({
+      generationConfig,
+      history: [
+      ],
+    });
+  
+    const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
+    console.log(result.response.text());
+  }
+  
+  run();
 
-export default async function handler(req, res) {
+  const promptText = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
+
+/*export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { tema, dificuldade, objecao } = req.body;
 
@@ -58,4 +93,4 @@ export default async function handler(req, res) {
         // Return error if the method is not POST
         res.status(405).json({ error: 'Método não permitido.' });
     }
-}
+}*/
