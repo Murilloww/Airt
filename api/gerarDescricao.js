@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
 
         try {
-            const response = await axios.post('https://api.gemini.com/v1beta/cachedContents', {
+            const response = await axios.post('https://generativelanguage.googleapis.com/v1beta/cachedContents', {
                 prompt: prompt,
             }, {
                 headers: {
