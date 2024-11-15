@@ -3,20 +3,25 @@ async function geradorDescricao() {
     const dificuldade = localStorage.getItem('dificuldade');
     const objecao = localStorage.getItem('objecao');
 
+    // Validação dos dados do localStorage
     if (!tema || !dificuldade || !objecao) {
         console.error('Faltam informações');
         document.querySelector('textarea').value = 'Informações incompletas para gerar descrição.';
         return;
     }
 
+    document.querySelector('textarea').value = 'Gerando descrição...';
+
     try {
         const response = await axios.post('/api/gerarDescricao.js', { tema, dificuldade, objecao });
 
+        // Verificar se o status da resposta é válido
         if (response.status !== 200) {
-            throw new Error('Erro ao chamar o servidor');
+            throw new Error(`Erro na API: Status ${response.status}`);
         }
 
-        const descricao = response.data.descricao;
+        // Obter e verificar a descrição
+        const descricao = response?.data?.descricao;
         if (descricao) {
             document.querySelector('textarea').value = descricao;
         } else {
@@ -28,5 +33,5 @@ async function geradorDescricao() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', geradorDescricao);
 
+document.addEventListener('DOMContentLoaded', geradorDescricao);
