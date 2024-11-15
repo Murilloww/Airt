@@ -10,7 +10,7 @@ async function geradorDescricao() {
     }
 
     try {
-        const response = await axios.post('/api/generate-description', { tema, dificuldade, objecao });
+        const response = await axios.post('/api/gerarDescricao.js', { tema, dificuldade, objecao });
 
         if (response.status !== 200) {
             throw new Error('Erro ao chamar o servidor');
