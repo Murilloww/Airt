@@ -2,7 +2,7 @@ require('dotenv').config();
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Configuração da API
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = process.env.API_KEY;
 if (!apiKey) {
     throw new Error("API Key não configurada. Verifique o arquivo .env");
 }
@@ -13,7 +13,7 @@ const model = genAI.getGenerativeModel({
 });
 
 const generationConfig = {
-    temperature: 1,
+    temperature: 2,
     topP: 0.95,
     topK: 40,
     maxOutputTokens: 8192,
