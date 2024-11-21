@@ -1,10 +1,7 @@
 require('dotenv').config();
-import { GoogleGenerativeAI} from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const tema = localStorage.getItem('tema');
-const dificuldade = localStorage.getItem('dificuldade');
-const objecao = localStorage.getItem('objecao');
-
+// Configuração da API
 const apiKey = process.env.GEMINI_API_KEY;
 if (!apiKey) {
     throw new Error("API Key não configurada. Verifique o arquivo .env");
@@ -23,8 +20,33 @@ const generationConfig = {
     responseMimeType: "text/plain",
 };
 
+// Função Principal para lidar com requisições
+export default async function handler(req, res) {
+    if (req.method !== 'POST') {
+        res.setHeader('Allow', ['POST']);
+        return res.status(405).json({ error: `Método ${req.method} não permitido.` });
+    }
 
-const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
-const result = await model.generateContent(prompt);
-console.log(result.response.text());
+    const { tema, dificuldade, objecao } = req.body;
 
+    // Validação dos parâmetros
+    if (!tema || !dificuldade || !objecao) {
+        return res.status(400).json({ error: "Faltam parâmetros obrigatórios: tema, dificuldade, objecao." });
+    }
+
+    const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
+
+    try {
+        const result = await model.generateContent(prompt, generationConfig);
+        const descricao = result?.response?.text;
+
+        if (!descricao) {
+            throw new Error("Resposta inválida da API.");
+        }
+
+        return res.status(200).json({ descricao });
+    } catch (error) {
+        console.error("Erro ao gerar conteúdo:", error.message);
+        return res.status(500).json({ error: "Erro ao gerar a descrição. Tente novamente mais tarde." });
+    }
+}

@@ -12,9 +12,9 @@ async function geradorDescricao() {
     document.querySelector('textarea').value = 'Gerando descrição...';
 
     try {
-        const response = await axios.post('/api/gerarDescricao.js', { tema, dificuldade, objecao });
+        // Use o caminho completo para o endpoint da API no Vercel
+        const response = await axios.post('https://airt-tcc.vercel.app/api/gerarDescricao', { tema, dificuldade, objecao });
 
-        
         if (response.status !== 200) {
             throw new Error(`Erro na API: Status ${response.status}`);
         }
