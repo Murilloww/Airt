@@ -20,7 +20,6 @@ const generationConfig = {
     responseMimeType: "text/plain",
 };
 
-// Função Principal para lidar com requisições
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         res.setHeader('Allow', ['POST']);
@@ -29,7 +28,6 @@ export default async function handler(req, res) {
 
     const { tema, dificuldade, objecao } = req.body;
 
-    // Validação dos parâmetros
     if (!tema || !dificuldade || !objecao) {
         return res.status(400).json({ error: "Faltam parâmetros obrigatórios: tema, dificuldade, objecao." });
     }
