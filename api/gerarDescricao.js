@@ -1,11 +1,10 @@
 require('dotenv').config();
-import { 
-    GoogleGenerativeAI, 
-    HarmCategory, 
-    HarmBlockThreshold 
-} from "@google/generative-ai";
+import { GoogleGenerativeAI} from "@google/generative-ai";
 
-// Configuração da API
+const tema = localStorage.getItem('tema');
+const dificuldade = localStorage.getItem('dificuldade');
+const objecao = localStorage.getItem('objecao');
+
 const apiKey = process.env.GEMINI_API_KEY;
 if (!apiKey) {
     throw new Error("API Key não configurada. Verifique o arquivo .env");
@@ -24,22 +23,8 @@ const generationConfig = {
     responseMimeType: "text/plain",
 };
 
-// Função para interagir com o modelo
-async function generatePromptResponse(tema, dificuldade, objecao) {
-    const promptText = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
 
-    const chatSession = model.startChat({
-        generationConfig,
-        history: [],
-    });
+const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
+const result = await model.generateContent(prompt);
+console.log(result.response.text());
 
-    try {
-        const result = await chatSession.sendMessage(promptText);
-        return result.response.text;
-    } catch (error) {
-        console.error("Erro ao interagir com a API:", error.message);
-        throw new Error("Erro ao gerar a resposta.");
-    }
-}
-
-// Exportando a função para o Vercel
