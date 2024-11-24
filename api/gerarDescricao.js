@@ -32,11 +32,13 @@ export default async function handler(req, res) {
     }
 
     const prompt = `Gere uma ideia de desenho com o tema '${tema}', com dificuldade '${dificuldade}', e exclua '${objecao}'.`;
+    console.log("Prompt enviado para a API:", prompt);
+    console.log("Configuração de geração:", generationConfig);
     
     try {
         const result = await model.generateContent(prompt, generationConfig);
+        console.log("Resposta da API:", JSON.stringify(result, null, 2));
         const descricao = result?.response?.text;
-        console.log("Resultado completo da API:", JSON.stringify(result, null, 2));
 
         if (!descricao) {
             throw new Error("Resposta inválida da API.");
