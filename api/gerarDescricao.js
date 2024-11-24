@@ -31,7 +31,14 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: "Faltam parâmetros obrigatórios: tema, dificuldade, objecao." });
     }
 
-    const prompt = `Gere uma ideia de desenho com o tema '${tema}', com dificuldade '${dificuldade}', e exclua '${objecao}'.`;
+    const prompt = `
+        Gere uma ideia de desenho com os seguintes critérios:
+        1. Tema: ${tema}
+        2. Dificuldade: ${dificuldade}
+        3. Não incluir: ${objecao}
+
+        Por favor, organize as informações em um formato claro, sem usar asteriscos ou caracteres especiais desnecessários. Evite conclusões ou comentários adicionais.`;
+
     console.log("Prompt enviado para a API:", prompt);
     console.log("Configuração de geração:", generationConfig);
 
