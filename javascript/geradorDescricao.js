@@ -31,3 +31,5 @@ async function geradorDescricao() {
 }
 
 document.addEventListener('DOMContentLoaded', geradorDescricao);
+console.log("Resultado completo da API:", result);
+

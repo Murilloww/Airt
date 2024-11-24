@@ -33,7 +33,7 @@ export default async function handler(req, res) {
     }
 
     const prompt = `Gere uma ideia de desenho com o tema: ${tema}, com um nível de dificuldade: ${dificuldade}, com estas objeções: ${objecao}`;
-
+    
     try {
         const result = await model.generateContent(prompt, generationConfig);
         const descricao = result?.response?.text;
