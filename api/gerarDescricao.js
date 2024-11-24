@@ -32,7 +32,6 @@ export default async function handler(req, res) {
     }
 
     const prompt = `Gere uma ideia de desenho com o tema '${tema}', com dificuldade '${dificuldade}', e exclua '${objecao}'.`;
-    const result = await model.generateContent(prompt, generationConfig);
     
     try {
         const result = await model.generateContent(prompt, generationConfig);
