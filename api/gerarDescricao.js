@@ -34,5 +34,17 @@ export default async function handler(req, res) {
     const prompt = `Gere uma ideia de desenho com o tema '${tema}', com dificuldade '${dificuldade}', e exclua '${objecao}'.`;
     const result = await model.generateContent(prompt, generationConfig);
     
-    
+    try {
+        const result = await model.generateContent(prompt, generationConfig);
+        const descricao = result?.response?.text;
+
+        if (!descricao) {
+            throw new Error("Resposta inválida da API.");
+        }
+
+        return res.status(200).json({ descricao });
+    } catch (error) {
+        console.error("Erro ao gerar conteúdo:", error.message);
+        return res.status(500).json({ error: "Erro ao gerar a descrição. Tente novamente mais tarde." });
+    }
 }
