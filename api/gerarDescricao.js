@@ -36,6 +36,7 @@ export default async function handler(req, res) {
     try {
         const result = await model.generateContent(prompt, generationConfig);
         const descricao = result?.response?.text;
+        console.log("Resultado completo da API:", JSON.stringify(result, null, 2));
 
         if (!descricao) {
             throw new Error("Resposta inválida da API.");
