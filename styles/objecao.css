@@ -120,6 +120,7 @@ input[type="text"]:hover {
     button {
         width: 90%;
         height: 50px;
+        font-size: 20px;
     }
 }
 
