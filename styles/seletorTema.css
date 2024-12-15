@@ -92,11 +92,11 @@ select:hover{
     }
 
     .button-container {
-        width: 90%; /* Ajuste da largura do botão para 90% da tela */
+        width: 80%; /* Ajuste da largura do botão para 90% da tela */
     }
 
     .select-container {
-        width: 90%; /* Ajuste da largura do select para 90% da tela */
+        width: 80%; /* Ajuste da largura do select para 90% da tela */
     }
 
     select {
@@ -105,7 +105,7 @@ select:hover{
     }
 
     button {
-        width: 100%; /* A largura do botão será 100% do container */
+        width: 90%; /* A largura do botão será 100% do container */
         height: 50px; /* Mantém a altura do botão menor */
         font-size: 12px; /* Diminui ainda mais o tamanho da fonte do botão */
     }
