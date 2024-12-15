@@ -80,7 +80,6 @@ select:hover{
     transition: 0.5s;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .dificuldade-container h1 {
         font-size: 35px;
