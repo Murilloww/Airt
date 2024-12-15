@@ -171,97 +171,88 @@ button:disabled {
     cursor: not-allowed;
 }
 
-body {
-    font-family: var(--fonte1);
-    background-color: var(--corFundo);
-    color: white;
-    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
-}
-
-#hero {
-    background-image: url(/images/black3.jpg);
-    background-position: center;
-    background-size: cover; /* Garante que a imagem cubra toda a área */
-    background-attachment: fixed;
-    height: 500px;
-    width: 100%;
-    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.336);
-}
-
-#hero > h1 {
-    font-family: var(--fonte2);
-    text-transform: uppercase;
-    text-align: center;
-    padding: 4em 2em; /* Ajuste para garantir que o texto fique centralizado e adequado */
-    font-size: 50px;
-    margin: 0;
-}
-
 @media (max-width: 480px) {
+    #hero > h1 {
+        font-size: 30px; /* Tamanho de fonte menor para telas pequenas */
+        padding: 2em 1em; /* Ajuste do padding */
+    }
+    
+    .botao {
+        font-size: 20px;
+        padding: 0.8em;
+    }
+
+    .botao-logo {
+        width: 35px;
+    }
+
     #container {
         flex-direction: column;
         margin-inline: 0;
         gap: 20px;
         padding-block: 5em;
     }
+
     #sobre > h2 {
         font-size: 30px;
         padding: 1em;
     }
+
     #sobre > p {
         margin-inline: 1em;
         margin-left: 0;
         font-size: 16px;
     }
+
     footer {
         padding: 20px;
     }
+
     nav > a {
         padding-inline: 1em;
         font-size: 18px;
     }
+
     #contato > nav > a > img {
-        width: 25px;
-    }
-
-    #hero {
-        height: 400px;
-        padding: 2em;
-    }
-
-    #hero > h1 {
-        font-size: 35px;
-        padding: 1.5em;
+        width: 30px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+    #hero > h1 {
+        font-size: 40px;
+        padding: 3em;
+    }
+
+    .botao {
+        font-size: 22px;
+        padding: 1em;
+    }
+
+    .botao-logo {
+        width: 40px;
+    }
+
     #container {
         margin-inline: 2em;
         gap: 30px;
     }
+
     #sobre > h2 {
         font-size: 35px;
         padding: 1.2em;
     }
+
     #sobre > p {
         margin-inline: 2em;
         font-size: 18px;
     }
+
     footer {
         padding: 30px;
     }
+
     nav > a {
         padding-inline: 2em;
     }
-
-    #hero {
-        height: 450px;
-    }
-
-    #hero > h1 {
-        font-size: 45px;
-        padding: 2em;
-    }
 }
-
