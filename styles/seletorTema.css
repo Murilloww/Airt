@@ -79,3 +79,8 @@ select:hover{
     background-color: #581f85;
     transition: 0.5s;
 }
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
