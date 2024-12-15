@@ -249,6 +249,91 @@ select:hover {
     transition: 0.5s;
 }
 
+body {
+    background-color: #171717;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dificuldade-container {
+    text-align: center;
+}
+
+.dificuldade-container h1 {
+    font-family: 'Fina', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#select-botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.select-container,
+.button-container {
+    margin: 0 10px;
+    width: 100%; /* Ajustando para que fiquem centralizados */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #2d0f44ea;
+    color: white;
+    border: 1px solid var(--corObj);
+    border-radius: 5px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Fina', sans-serif;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+select:focus {
+    border-color: var(--corObj);
+}
+
+select option {
+    color: white;
+}
+
+button {
+    font-family: 'Fina', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    background-color: var(--corObj);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 70%; /* Largura reduzida para 70% */
+    height: 60px; /* Altura reduzida para 60px */
+    box-sizing: border-box;
+    margin-top: 10px;
+    text-align: center; /* Centraliza o texto do botão */
+}
+
+button:hover {
+    background-color: #581f85;
+    transition: 0.5s;
+}
+
+select:hover {
+    background-color: #581f85;
+    transition: 0.5s;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .dificuldade-container h1 {
@@ -258,22 +343,22 @@ select:hover {
     #select-botao {
         flex-direction: column;
         align-items: center;
-        width: 70%;
+        width: 100%;
     }
 
     .select-container,
     .button-container {
-        width: 70%;
+        width: 80%;
     }
 
     select {
-        width: 70%;
+        width: 90%;
         height: 50px;
     }
 
     button {
-        width: 70%; /* Mantido igual aos outros botões */
-        height: 70px; /* Mantido igual aos outros botões */
+        width: 70%; /* Largura ajustada para 70% */
+        height: 60px; /* Altura ajustada para 60px */
     }
 }
 
@@ -284,19 +369,20 @@ select:hover {
 
     .select-container,
     .button-container {
-        width: 70%;
+        width: 90%;
     }
 
     select {
-        width: 70%;
+        width: 90%;
         height: 50px;
     }
 
     button {
-        width: 70%; /* Ajustado para 90% da largura */
-        height: 70px; /* Mantido igual aos outros botões */
+        width: 80%; /* Largura ajustada para 80% */
+        height: 60px; /* Altura ajustada para 60px */
     }
 }
+
 
 
 
