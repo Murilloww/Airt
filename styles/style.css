@@ -189,7 +189,7 @@ button:disabled {
 @media (max-width: 480px) {
     #hero > h1 {
         font-size: 25px; /* Reduz o tamanho do texto no hero para dispositivos móveis */
-        padding: 0 1em;
+        padding: 0 2em;
     }
 
     #container {
