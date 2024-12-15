@@ -21,16 +21,14 @@ body {
 
 #select-botao {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .select-container,
 .button-container {
     margin: 0 10px;
-    width: 100%; /* Ajustando para que fiquem centralizados */
+    width: 250px;
 }
 
 select {
@@ -44,6 +42,7 @@ select {
     appearance: none;
     outline: none;
     cursor: pointer;
+    text-align: center;
     font-family: 'Fina', sans-serif;
     height: 70px;
     box-sizing: border-box;
@@ -59,75 +58,24 @@ select option {
 
 button {
     font-family: 'Fina', sans-serif;
-    font-size: 12px; /* Diminui ainda mais o tamanho da fonte */
-    padding: 6px 12px; /* Ajusta o padding para um tamanho menor */
+    font-size: 15px;
+    padding: 10px;
     background-color: var(--corObj);
     border-radius: 5px;
     border: none;
     color: white;
-    cursor: pointer;
-    width: 60%; /* Largura ajustada para 60% */
-    height: 45px; /* Altura ajustada para 45px */
-    box-sizing: border-box;
-    margin-top: 10px;
-    text-align: center; /* Centraliza o texto do botão */
+    cursor: pointer; 
+    width: 30%; 
+    height: 70px; 
+    box-sizing: border-box; 
 }
 
-button:hover {
+button:hover{
     background-color: #581f85;
     transition: 0.5s;
 }
 
-select:hover {
+select:hover{
     background-color: #581f85;
     transition: 0.5s;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .dificuldade-container h1 {
-        font-size: 35px;
-    }
-
-    #select-botao {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .select-container,
-    .button-container {
-        width: 80%;
-    }
-
-    select {
-        width: 90%;
-        height: 50px;
-    }
-
-    button {
-        width: 60%; /* Largura ajustada para 60% */
-        height: 45px; /* Altura ajustada para 45px */
-    }
-}
-
-@media (max-width: 480px) {
-    .dificuldade-container h1 {
-        font-size: 28px;
-    }
-
-    .select-container,
-    .button-container {
-        width: 90%;
-    }
-
-    select {
-        width: 90%;
-        height: 50px;
-    }
-
-    button {
-        width: 70%; /* Largura ajustada para 70% */
-        height: 45px; /* Altura ajustada para 45px */
-    }
 }
