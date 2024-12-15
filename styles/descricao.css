@@ -21,6 +21,7 @@ body {
 
 #select-botao {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -100,10 +101,8 @@ button:hover {
     }
 }
 
-/* Responsividade para telas maiores */
 @media (min-width: 1024px) {
     html, body {
         overflow-y: hidden; /* Remove a barra de rolagem vertical em telas grandes */
     }
 }
-
