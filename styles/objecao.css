@@ -50,24 +50,24 @@ input[type="text"]:focus {
     border-color: var(--corObj); 
 }
 
-/* Ajustes para aumentar a largura do botão */
+/* Ajustes para aumentar a largura do botão Confirmar */
 button {
     font-family: 'Fina', sans-serif; 
-    font-size: 16px;  /* Ajustei para centralizar o texto melhor */
+    font-size: 16px; 
     padding: 10px;
     background-color: var(--corObj); 
     border-radius: 5px; 
     border: none; 
     color: white; 
     cursor: pointer; 
-    width: 350px; /* Aumentei a largura do botão */
+    width: 350px; /* Largura do botão aumentada */
     height: 70px; /* Altura igual ao input */
     box-sizing: border-box; 
     margin-top: 10px; 
-    text-align: center; /* Garantir que o texto do botão seja centralizado */
+    text-align: center; /* Centralizando o texto do botão */
     display: flex;
     justify-content: center;
-    align-items: center; /* Garantir que o conteúdo do botão fique centralizado */
+    align-items: center; /* Garantindo que o conteúdo fique centralizado */
 }
 
 button:hover {
@@ -103,7 +103,7 @@ input[type="text"]:hover {
     }
 
     button {
-        width: 80%;
+        width: 90%;
         height: 50px;
     }
 }
