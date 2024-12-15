@@ -74,3 +74,9 @@ input[type="text"]:hover {
     background-color: #581f85; 
     transition: 0.5s; 
 }
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+}
