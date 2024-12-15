@@ -187,9 +187,17 @@ button:disabled {
 }
 
 @media (max-width: 480px) {
+    #hero {
+        padding-top: 8em; /* Aumenta o espaçamento superior para dar mais espaço ao texto */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     #hero > h1 {
-        font-size: 25px; /* Reduz o tamanho do texto no hero para dispositivos móveis */
-        padding: 0 10em;
+        font-size: 30px; /* Reduz o tamanho do texto no hero */
+        padding: 0 1em;
     }
 
     #container {
@@ -220,12 +228,12 @@ button:disabled {
     #contato > nav > a {
         margin: 0.5em;
         display: block;
-        font-size: 18px; /* Ajuste do tamanho da fonte no contato */
+        font-size: 18px;
     }
 
     #contato > nav > a > img {
         vertical-align: middle;
-        margin-bottom: 0.5em; /* Adiciona espaçamento entre ícones */
+        margin-bottom: 0.5em;
     }
 
     nav > a {
@@ -235,8 +243,16 @@ button:disabled {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+    #hero {
+        padding-top: 6em; /* Ajuste o espaçamento para dispositivos de tamanho médio */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     #hero > h1 {
-        font-size: 40px; /* Ajusta o tamanho do texto no hero para tablets */
+        font-size: 40px; /* Ajuste o tamanho do texto */
     }
 
     #container {
@@ -264,18 +280,15 @@ button:disabled {
     #contato > nav > a {
         margin: 0.5em;
         display: block;
-        font-size: 20px; /* Ajuste da fonte para tamanhos médios */
+        font-size: 20px;
     }
 
     #contato > nav > a > img {
         vertical-align: middle;
-        margin-bottom: 0.5em; /* Adiciona espaçamento entre ícones */
+        margin-bottom: 0.5em;
     }
 
     nav > a {
         padding-inline: 2em;
     }
 }
-
-
-
