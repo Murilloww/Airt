@@ -78,7 +78,7 @@ button:hover {
     }
 
     textarea {
-        height: 120px; /* Diminui a altura da área de texto */
+        height: 250px; /* Diminui a altura da área de texto */
     }
 
     #goto-objecao {
