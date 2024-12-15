@@ -112,7 +112,7 @@ select:hover{
 
 @media (max-width: 480px) {
     .dificuldade-container h1 {
-        font-size: 25px; /* Diminui ainda mais o tamanho do título */
+        font-size: 20px; /* Diminui ainda mais o tamanho do título */
     }
 
     .select-container,
@@ -121,12 +121,12 @@ select:hover{
     }
 
     select {
-        width: 70%;
+        width: 90%;
         height: 50px; /* Mantém a altura do select menor */
     }
 
     button {
-        width: 70%;
+        width: 90%;
         height: 50px; /* Mantém a altura do botão menor */
         font-size: 13px; /* Diminui ainda mais o tamanho da fonte do botão */
     }
