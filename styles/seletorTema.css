@@ -117,16 +117,16 @@ select:hover{
 
     .select-container,
     .button-container {
-        width: 90%;
+        width: 70%;
     }
 
     select {
-        width: 90%;
+        width: 70%;
         height: 50px; /* Mantém a altura do select menor */
     }
 
     button {
-        width: 90%;
+        width: 70%;
         height: 50px; /* Mantém a altura do botão menor */
         font-size: 13px; /* Diminui ainda mais o tamanho da fonte do botão */
     }
