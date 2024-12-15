@@ -50,20 +50,24 @@ input[type="text"]:focus {
     border-color: var(--corObj); 
 }
 
-/* Aumentando o botão Confirmar para o mesmo tamanho do input */
+/* Ajustes para garantir que o botão "Confirmar" tenha o mesmo tamanho que o input */
 button {
     font-family: 'Fina', sans-serif; 
-    font-size: 15px; 
-    padding: 10px; 
+    font-size: 16px;  /* Ajustei para centralizar o texto melhor */
+    padding: 10px;
     background-color: var(--corObj); 
     border-radius: 5px; 
     border: none; 
     color: white; 
     cursor: pointer; 
-    width: 300px; /* Largura igual ao input */
-    height: 70px; /* Altura igual ao input */
+    width: 300px; /* Igual ao input */
+    height: 70px; /* Igual ao input */
     box-sizing: border-box; 
     margin-top: 10px; 
+    text-align: center; /* Garantir que o texto do botão seja centralizado */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Garantir que o conteúdo do botão fique centralizado */
 }
 
 button:hover {
@@ -122,6 +126,5 @@ input[type="text"]:hover {
         width: 90%;
         height: 50px;
         font-size: 15px;
-        padding-inline: 4em;
     }
 }
