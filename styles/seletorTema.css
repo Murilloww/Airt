@@ -83,7 +83,7 @@ select:hover{
 /* Responsividade */
 @media (max-width: 768px) {
     .dificuldade-container h1 {
-        font-size: 30px; /* Diminui o tamanho do título */
+        font-size: 25px; /* Diminui o tamanho do título */
     }
 
     #select-botao {
@@ -106,13 +106,13 @@ select:hover{
     button {
         width: 80%; /* Diminui a largura do botão */
         height: 50px; /* Diminui a altura do botão */
-        font-size: 14px; /* Diminui o tamanho da fonte do botão */
+        font-size: 13px; /* Diminui o tamanho da fonte do botão */
     }
 }
 
 @media (max-width: 480px) {
     .dificuldade-container h1 {
-        font-size: 20px; /* Diminui ainda mais o tamanho do título */
+        font-size: 18px; /* Diminui ainda mais o tamanho do título */
     }
 
     .select-container,
@@ -128,6 +128,6 @@ select:hover{
     button {
         width: 90%;
         height: 50px; /* Mantém a altura do botão menor */
-        font-size: 13px; /* Diminui ainda mais o tamanho da fonte do botão */
+        font-size: 12px; /* Diminui ainda mais o tamanho da fonte do botão */
     }
 }
