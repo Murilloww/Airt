@@ -82,11 +82,11 @@ select:hover{
 
 @media (max-width: 480px) {
     .dificuldade-container h1 {
-        font-size: 18px; /* Diminui ainda mais o tamanho do título */
+        font-size: 18px; 
     }
 
     .button-container {
-        width: 50%;
+        width: 40%;
     }
 
     .select-container {
