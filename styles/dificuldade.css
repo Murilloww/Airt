@@ -108,3 +108,9 @@ select:hover{
         font-size: 12px; /* Diminui ainda mais o tamanho da fonte do botão */
     }
 }
+
+@media (min-width: 1024px) {
+    html, body {
+        overflow-y: hidden; /* Remove a barra de rolagem vertical em telas grandes */
+    }
+}

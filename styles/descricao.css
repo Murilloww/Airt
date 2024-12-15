@@ -99,3 +99,11 @@ button:hover {
         font-size: 15px; /* Ajuste no tamanho da fonte para o mobile */
     }
 }
+
+/* Responsividade para telas maiores */
+@media (min-width: 1024px) {
+    html, body {
+        overflow-y: hidden; /* Remove a barra de rolagem vertical em telas grandes */
+    }
+}
+

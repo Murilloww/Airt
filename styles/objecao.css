@@ -81,3 +81,9 @@ input[type="text"]:hover {
         font-size: 30px;
     }
 }
+
+@media (min-width: 1024px) {
+    html, body {
+        overflow-y: hidden; /* Remove a barra de rolagem vertical em telas grandes */
+    }
+}
