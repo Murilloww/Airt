@@ -258,21 +258,21 @@ select:hover {
     #select-botao {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 70%;
     }
 
     .select-container,
     .button-container {
-        width: 80%;
+        width: 70%;
     }
 
     select {
-        width: 90%;
+        width: 70%;
         height: 50px;
     }
 
     button {
-        width: 80%; /* Mantido igual aos outros botões */
+        width: 70%; /* Mantido igual aos outros botões */
         height: 70px; /* Mantido igual aos outros botões */
     }
 }
@@ -284,16 +284,16 @@ select:hover {
 
     .select-container,
     .button-container {
-        width: 90%;
+        width: 70%;
     }
 
     select {
-        width: 90%;
+        width: 70%;
         height: 50px;
     }
 
     button {
-        width: 90%; /* Ajustado para 90% da largura */
+        width: 70%; /* Ajustado para 90% da largura */
         height: 70px; /* Mantido igual aos outros botões */
     }
 }
