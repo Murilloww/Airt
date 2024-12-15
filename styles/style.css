@@ -187,50 +187,95 @@ button:disabled {
 }
 
 @media (max-width: 480px) {
+    #hero > h1 {
+        font-size: 30px; /* Reduz o tamanho do texto no hero para dispositivos móveis */
+        padding: 0 1em;
+    }
+
     #container {
         flex-direction: column;
         margin-inline: 0;
         gap: 20px;
         padding-block: 5em;
     }
+
     #sobre > h2 {
         font-size: 30px;
         padding: 1em;
     }
+
     #sobre > p {
         margin-inline: 1em;
         margin-left: 0;
         font-size: 16px;
     }
+
     footer {
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    #contato > nav > a {
+        margin: 0.5em;
+        display: block;
+        font-size: 18px; /* Ajuste do tamanho da fonte no contato */
+    }
+
+    #contato > nav > a > img {
+        vertical-align: middle;
+        margin-bottom: 0.5em; /* Adiciona espaçamento entre ícones */
+    }
+
     nav > a {
         padding-inline: 1em;
         font-size: 18px;
     }
-    #contato > nav > a > img {
-        width: 30px;
-    }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+    #hero > h1 {
+        font-size: 40px; /* Ajusta o tamanho do texto no hero para tablets */
+    }
+
     #container {
         margin-inline: 2em;
         gap: 30px;
     }
+
     #sobre > h2 {
         font-size: 35px;
         padding: 1.2em;
     }
+
     #sobre > p {
         margin-inline: 2em;
         font-size: 18px;
     }
+
     footer {
         padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    #contato > nav > a {
+        margin: 0.5em;
+        display: block;
+        font-size: 20px; /* Ajuste da fonte para tamanhos médios */
+    }
+
+    #contato > nav > a > img {
+        vertical-align: middle;
+        margin-bottom: 0.5em; /* Adiciona espaçamento entre ícones */
+    }
+
     nav > a {
         padding-inline: 2em;
     }
 }
+
+
+
