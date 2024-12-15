@@ -197,7 +197,7 @@ button:disabled {
 
     #hero > h1 {
         font-size: 30px; /* Reduz o tamanho do texto no hero */
-        padding: 1.5em 1em;
+        padding: 1em 1em;
     }
 
     #container {
