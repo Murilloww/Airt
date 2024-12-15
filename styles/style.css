@@ -178,24 +178,43 @@ button:disabled {
         gap: 20px;
         padding-block: 5em;
     }
+
     #sobre > h2 {
         font-size: 30px;
         padding: 1em;
     }
+
     #sobre > p {
         margin-inline: 1em;
         margin-left: 0;
         font-size: 16px;
     }
+
     footer {
         padding: 20px;
     }
+
     nav > a {
         padding-inline: 1em;
         font-size: 18px;
     }
+
     #contato > nav > a > img {
-        width: 30px; 
+        width: 30px;
+    }
+
+    #hero > h1 {
+        font-size: 30px;
+        padding: 2em;
+    }
+
+    .botao {
+        font-size: 20px;
+        padding: 0.8em;
+    }
+
+    .botao-logo {
+        width: 35px;
     }
 }
 
@@ -204,18 +223,36 @@ button:disabled {
         margin-inline: 2em;
         gap: 30px;
     }
+
     #sobre > h2 {
         font-size: 35px;
         padding: 1.2em;
     }
+
     #sobre > p {
         margin-inline: 2em;
         font-size: 18px;
     }
+
     footer {
         padding: 30px;
     }
+
     nav > a {
         padding-inline: 2em;
+    }
+
+    #hero > h1 {
+        font-size: 40px;
+        padding: 3em;
+    }
+
+    .botao {
+        font-size: 22px;
+        padding: 1em;
+    }
+
+    .botao-logo {
+        width: 40px;
     }
 }
