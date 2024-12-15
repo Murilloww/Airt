@@ -84,6 +84,8 @@ button:hover {
 
     button {
         width: 90%;
+        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
+        font-size: 15px;  /* Ajustei o tamanho da fonte */
     }
 }
 
@@ -102,8 +104,11 @@ button:hover {
 
     button {
         width: 90%;
+        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
+        font-size: 15px;  /* Ajustei o tamanho da fonte */
     }
 }
+
 
 
 

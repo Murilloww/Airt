@@ -99,7 +99,8 @@ input[type="text"]:hover {
 
     button {
         width: 80%;
-        height: 50px;
+        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
+        font-size: 15px;  /* Ajustei o tamanho da fonte */
     }
 }
 
@@ -119,7 +120,9 @@ input[type="text"]:hover {
 
     button {
         width: 90%;
-        height: 50px;
+        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
+        font-size: 15px;  /* Ajustei o tamanho da fonte */
     }
 }
+
 

@@ -89,6 +89,7 @@ select:hover{
     #select-botao {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .select-container,
@@ -103,7 +104,8 @@ select:hover{
 
     button {
         width: 80%;
-        height: 50px;
+        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
+        font-size: 15px;  /* Ajustei o tamanho da fonte */
     }
 }
 
@@ -124,7 +126,10 @@ select:hover{
 
     button {
         width: 90%;
-        height: 50px;
+        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
+        font-size: 15px;  /* Ajustei o tamanho da fonte */
     }
 }
+
+
 
