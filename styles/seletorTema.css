@@ -80,7 +80,3 @@ select:hover{
     transition: 0.5s;
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}

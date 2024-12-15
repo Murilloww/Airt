@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (confirmarBtn) {
       confirmarBtn.addEventListener('click', () => {
-          // Obtém o valor do campo de entrada (input)
           const objecaoTexto = document.querySelector('input[type="text"]').value;
 
           if (objecaoTexto) {

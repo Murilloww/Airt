@@ -165,3 +165,8 @@ footer{
     padding-inline: 10px;
     vertical-align: middle;
 }
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
