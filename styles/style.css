@@ -188,7 +188,7 @@ button:disabled {
 
 @media (max-width: 480px) {
     #hero {
-        padding-top: 5em; /* Aumenta o espaçamento superior para dar mais espaço ao texto */
+        padding-top: 3em; /* Aumenta o espaçamento superior para dar mais espaço ao texto */
         display: flex;
         justify-content: center;
         align-items: center;
