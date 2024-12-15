@@ -197,89 +197,54 @@ body {
     margin: 0;
 }
 
+footer {
+    background-color: rgba(0, 0, 0, 0.486);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#contato {
+    padding-bottom: 1em;
+}
+
+#contato > h2 {
+    font-family: 'Fina', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 1em;
+}
+
+#contato > nav {
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+#contato > nav > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center; /* Alinha o texto e ícones na vertical */
+}
+
+#contato > nav > a > img {
+    width: 30px; /* Tamanho dos ícones */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Ajustes em telas menores */
 @media (max-width: 480px) {
-    #hero > h1 {
-        font-size: 30px; /* Tamanho de fonte menor para telas pequenas */
-        padding: 2em 1em; /* Ajuste do padding */
-    }
-    
-    .botao {
-        font-size: 20px;
-        padding: 0.8em;
-    }
-
-    .botao-logo {
-        width: 35px;
-    }
-
-    #container {
-        flex-direction: column;
-        margin-inline: 0;
-        gap: 20px;
-        padding-block: 5em;
-    }
-
-    #sobre > h2 {
-        font-size: 30px;
-        padding: 1em;
-    }
-
-    #sobre > p {
-        margin-inline: 1em;
-        margin-left: 0;
-        font-size: 16px;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    nav > a {
-        padding-inline: 1em;
-        font-size: 18px;
+    #contato > nav > a {
+        font-size: 18px; /* Ajuste da fonte */
     }
 
     #contato > nav > a > img {
-        width: 30px;
+        width: 25px; /* Ajuste do tamanho do ícone */
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-    #hero > h1 {
-        font-size: 40px;
-        padding: 3em;
-    }
-
-    .botao {
-        font-size: 22px;
-        padding: 1em;
-    }
-
-    .botao-logo {
-        width: 40px;
-    }
-
-    #container {
-        margin-inline: 2em;
-        gap: 30px;
-    }
-
-    #sobre > h2 {
-        font-size: 35px;
-        padding: 1.2em;
-    }
-
-    #sobre > p {
-        margin-inline: 2em;
-        font-size: 18px;
-    }
-
-    footer {
-        padding: 30px;
-    }
-
-    nav > a {
-        padding-inline: 2em;
-    }
-}
 
