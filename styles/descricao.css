@@ -24,77 +24,80 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .input-container {
     margin: 0 10px;
-    width: 300px; 
+    width: 300px;
 }
 
 textarea {
-    width: 100%; 
-    padding: 10px; 
-    font-size: 1em; 
-    background-color: white; 
-    color: black; 
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: white;
+    color: black;
     border: 1px solid var(--corObj);
     border-radius: 5px;
-    outline: none; 
-    cursor: text; 
-    height: 200px; 
-    box-sizing: border-box; 
-    resize: none; 
+    outline: none;
+    cursor: text;
+    height: 200px;
+    box-sizing: border-box;
+    resize: none;
 }
 
 button {
-    font-family: 'Fina', sans-serif; 
-    font-size: 15px; 
-    padding: 10px; 
-    background-color: var(--corObj); 
-    border-radius: 5px; 
-    border: none; 
-    color: white; 
-    cursor: pointer; 
-    width: 300px; 
-    height: 70px; 
-    box-sizing: border-box; 
-    margin-top: 10px; 
+    font-family: 'Fina', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    background-color: var(--corObj);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    height: 70px;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #581f85; 
-    transition: 0.5s; 
+    background-color: #581f85;
+    transition: 0.5s;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 480px) {
     .tema-container h1 {
-        font-size: 30px;
+        font-size: 30px; /* Diminui o tamanho do título */
     }
 
     .input-container {
-        width: 90%;
+        width: 90%; /* Ajusta a largura do container de entrada */
     }
 
     textarea {
-        height: 120px;
+        height: 120px; /* Diminui a altura da área de texto */
     }
 
     #goto-objecao {
-        width: 90%;
-        height: 100px;  
-        font-size: 15px;  
+        width: 90%; /* Ajusta a largura do botão de objeção */
+        height: 100px; 
+        font-size: 15px;
         color: red;
     }
 
-    #goto-tema{
-        width: 90%;
-        height: 70px;  
-        font-size: 15px;  
+    #goto-tema {
+        width: 90%; /* Ajusta a largura do botão de tema */
+        height: 70px;
+        font-size: 15px;
+    }
+
+    /* Ajustando o botão "Gerar novamente" */
+    button {
+        width: 90%; /* Faz o botão "Gerar novamente" ocupar 90% da largura */
+        height: 70px; /* Mantém a altura igual */
+        font-size: 15px; /* Ajuste no tamanho da fonte para o mobile */
     }
 }
-
-
-
-
-
