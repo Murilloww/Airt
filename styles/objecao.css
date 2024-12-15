@@ -50,24 +50,19 @@ input[type="text"]:focus {
     border-color: var(--corObj); 
 }
 
-/* Ajustes para aumentar a largura do botão Confirmar */
 button {
     font-family: 'Fina', sans-serif; 
-    font-size: 16px; 
-    padding: 10px;
+    font-size: 15px; 
+    padding: 10px; 
     background-color: var(--corObj); 
     border-radius: 5px; 
     border: none; 
     color: white; 
     cursor: pointer; 
-    width: 350px; /* Largura do botão aumentada */
-    height: 70px; /* Altura igual ao input */
+    width: 300px; 
+    height: 70px; 
     box-sizing: border-box; 
     margin-top: 10px; 
-    text-align: center; /* Centralizando o texto do botão */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Garantindo que o conteúdo fique centralizado */
 }
 
 button:hover {
@@ -78,53 +73,4 @@ button:hover {
 input[type="text"]:hover {
     background-color: #581f85; 
     transition: 0.5s; 
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .tema-container h1 {
-        font-size: 35px;
-    }
-
-    #select-botao {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .input-container {
-        width: 80%;
-    }
-
-    input[type="text"] {
-        width: 90%;
-        height: 50px;
-    }
-
-    button {
-        width: 90%;
-        height: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    .tema-container h1 {
-        font-size: 28px;
-    }
-
-    .input-container {
-        width: 90%;
-    }
-
-    input[type="text"] {
-        width: 90%;
-        height: 50px;
-    }
-
-    button {
-        width: 90%;
-        height: 50px;
-        font-size: 15px;
-    }
 }
