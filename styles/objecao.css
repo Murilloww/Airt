@@ -50,22 +50,23 @@ input[type="text"]:focus {
     border-color: var(--corObj); 
 }
 
-button {
+/* Estilo específico para o botão Confirmar */
+button.confirmar {
     font-family: 'Fina', sans-serif; 
-    font-size: 15px; 
-    padding: 10px; 
+    font-size: 18px;  /* Aumentei o tamanho da fonte */
+    padding: 12px 24px;  /* Aumentei o padding para tornar o botão maior */
     background-color: var(--corObj); 
     border-radius: 5px; 
     border: none; 
     color: white; 
     cursor: pointer; 
     width: 300px; 
-    height: 70px; 
+    height: 80px;  /* Aumentei a altura para dar mais destaque */
     box-sizing: border-box; 
-    margin-top: 10px; 
+    margin-top: 20px; 
 }
 
-button:hover {
+button.confirmar:hover {
     background-color: #581f85; 
     transition: 0.5s; 
 }
@@ -99,8 +100,14 @@ input[type="text"]:hover {
 
     button {
         width: 80%;
-        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
-        font-size: 15px;  /* Ajustei o tamanho da fonte */
+        height: 70px;  
+        font-size: 15px;
+    }
+
+    button.confirmar {
+        width: 80%; 
+        height: 90px;  /* Aumentei a altura para o botão Confirmar */
+        font-size: 18px;  /* Aumentei o tamanho da fonte do botão Confirmar */
     }
 }
 
@@ -120,9 +127,13 @@ input[type="text"]:hover {
 
     button {
         width: 90%;
-        height: 70px;  /* Aumentei a altura para padronizar com outros botões */
-        font-size: 15px;  /* Ajustei o tamanho da fonte */
+        height: 70px;  
+        font-size: 15px; 
+    }
+
+    button.confirmar {
+        width: 90%; 
+        height: 90px;  /* Aumentei a altura para o botão Confirmar */
+        font-size: 18px;  /* Aumentei o tamanho da fonte do botão Confirmar */
     }
 }
-
-
