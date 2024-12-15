@@ -80,43 +80,16 @@ select:hover{
     transition: 0.5s;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .dificuldade-container h1 {
-        font-size: 25px; /* Diminui o tamanho do título */
-    }
-
-    #select-botao {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .select-container,
-    .button-container {
-        width: 80%;
-    }
-
-    select {
-        width: 90%;
-        height: 50px; /* Diminui a altura do select */
-    }
-
-    button {
-        width: 80%; /* Diminui a largura do botão */
-        height: 50px; /* Diminui a altura do botão */
-        font-size: 13px; /* Diminui o tamanho da fonte do botão */
-    }
-}
-
 @media (max-width: 480px) {
     .dificuldade-container h1 {
         font-size: 18px; /* Diminui ainda mais o tamanho do título */
     }
 
-    .select-container,
     .button-container {
+        width: 50%;
+    }
+
+    .select-container {
         width: 70%;
     }
 
