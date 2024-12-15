@@ -74,3 +74,51 @@ input[type="text"]:hover {
     background-color: #581f85; 
     transition: 0.5s; 
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tema-container h1 {
+        font-size: 35px;
+    }
+
+    #select-botao {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input-container {
+        width: 80%;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        height: 50px;
+    }
+
+    button {
+        width: 80%;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tema-container h1 {
+        font-size: 28px;
+    }
+
+    .input-container {
+        width: 90%;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        height: 50px;
+    }
+
+    button {
+        width: 90%;
+        height: 50px;
+    }
+}

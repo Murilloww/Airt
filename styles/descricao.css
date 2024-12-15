@@ -67,5 +67,42 @@ button:hover {
     transition: 0.5s; 
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .tema-container h1 {
+        font-size: 35px;
+    }
+
+    .input-container {
+        width: 80%;
+    }
+
+    textarea {
+        width: 90%;
+        height: 150px;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tema-container h1 {
+        font-size: 30px;
+    }
+
+    .input-container {
+        width: 90%;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    button {
+        width: 90%;
+    }
+}
 
 
