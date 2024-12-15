@@ -82,7 +82,7 @@ select:hover{
 
 @media (max-width: 480px) {
     .dificuldade-container h1 {
-        font-size: 25px; 
+        font-size: 20px; 
     }
 
     #select-botao {
