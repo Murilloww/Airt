@@ -10,38 +10,40 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box; /* Garantir que o box-sizing não crie problemas de dimensionamento */
 }
 
-:root{
+:root {
     --fonte1: 'Nunito', sans-serif;
     --fonte2: 'Fina', sans-serif;
     --corObj: #2D0F44;
     --corFundo: #171717;
 }
 
-body{
+body {
     font-family: var(--fonte1);
     background-color: var(--corFundo);
     color: white;
+    overflow-x: hidden; /* Evita a rolagem horizontal */
 }
 
-header{
+header {
     background-color: var(--corFundo);
     padding: 3em;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.267);
 }
 
-p{
+p {
     font-size: 27px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.623);
     line-height: 2em;
 }
 
-nav{
+nav {
     text-align: center;
 }
 
-nav > a{
+nav > a {
     font-size: 20px;
     font-family: var(--fonte2);
     color: white;
@@ -49,7 +51,7 @@ nav > a{
     padding-inline: 3em;
 }
 
-#hero{
+#hero {
     background-image: url(/images/black3.jpg);
     background-position: center;
     background-size: cover;
@@ -57,17 +59,21 @@ nav > a{
     height: 500px;
     width: 100%;
     box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.336);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#hero > h1{
+#hero > h1 {
     font-family: var(--fonte2);
     text-transform: uppercase;
     text-align: center;
     padding: 4em;
     font-size: 50px;
+    margin: 0;
 }
 
-.botao{
+.botao {
     font-family: var(--fonte2);
     font-size: 25px;
     padding: 1em;
@@ -78,20 +84,18 @@ nav > a{
     cursor: pointer;
 }
 
-
-.botao:hover{
+.botao:hover {
     background-color: #581f85;
     transition: 0.5s;
 }
 
-.botao-logo{
+.botao-logo {
     width: 45px;
     height: auto;
     cursor: pointer;
 }
 
-
-#container{
+#container {
     margin-inline: 10em;
     padding-block: 10em;
     display: flex;
@@ -101,7 +105,7 @@ nav > a{
     margin-block: 6em;
 }
 
-.box{
+.box {
     padding: 20px;
     margin: 5px;
     color: white;
@@ -109,44 +113,44 @@ nav > a{
     text-align: center;
 }
 
-#sobre{
+#sobre {
     padding-block: 10em;
     background-color: #242424;
 }
 
-#sobre > h2{
-    font-family: 'Fina',sans-serif;
+#sobre > h2 {
+    font-family: 'Fina', sans-serif;
     font-size: 40px;
     text-align: center;
     padding: 1.5em;
 }
 
-#sobre > p{
+#sobre > p {
     margin-inline: 2em;
     font-size: 20px;
     padding: 10px;
     margin-left: 15em;
 }
 
-strong{
+strong {
     background-color: #2d0f44c9;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.479);
     border-radius: 5px;
     padding: 3px;
 }
 
-footer{
+footer {
     background-color: rgba(0, 0, 0, 0.486);
     text-align: center;
     color: white;
     padding: 10px;
 }
 
-#contato{
+#contato {
     padding-bottom: 1em;
 }
 
-#contato > a{
+#contato > a {
     text-decoration: none;
     font-size: 20px;
     padding-inline: 3em;
@@ -154,14 +158,14 @@ footer{
     align-items: center;
 }
 
-#contato > h2{
-    font-family: 'Fina',sans-serif;
+#contato > h2 {
+    font-family: 'Fina', sans-serif;
     font-size: 30px;
     text-align: center;
     padding: 1em;
 }
 
-#contato > nav > a > img{
+#contato > nav > a > img {
     padding-inline: 10px;
     vertical-align: middle;
 }
@@ -172,86 +176,49 @@ button:disabled {
 }
 
 @media (max-width: 480px) {
-    #hero > h1 {
-        font-size: 30px; /* Tamanho de fonte menor para telas pequenas */
-        padding: 2em 1em; /* Ajuste do padding */
-    }
-    
-    .botao {
-        font-size: 20px;
-        padding: 0.8em;
-    }
-
-    .botao-logo {
-        width: 35px;
-    }
-
     #container {
         flex-direction: column;
         margin-inline: 0;
         gap: 20px;
         padding-block: 5em;
     }
-
     #sobre > h2 {
         font-size: 30px;
         padding: 1em;
     }
-
     #sobre > p {
         margin-inline: 1em;
         margin-left: 0;
         font-size: 16px;
     }
-
     footer {
         padding: 20px;
     }
-
     nav > a {
         padding-inline: 1em;
         font-size: 18px;
     }
-
     #contato > nav > a > img {
         width: 30px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    #hero > h1 {
-        font-size: 40px;
-        padding: 3em;
-    }
-
-    .botao {
-        font-size: 22px;
-        padding: 1em;
-    }
-
-    .botao-logo {
-        width: 40px;
-    }
-
     #container {
         margin-inline: 2em;
         gap: 30px;
     }
-
     #sobre > h2 {
         font-size: 35px;
         padding: 1.2em;
     }
-
     #sobre > p {
         margin-inline: 2em;
         font-size: 18px;
     }
-
     footer {
         padding: 30px;
     }
-
     nav > a {
         padding-inline: 2em;
     }
