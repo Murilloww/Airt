@@ -79,3 +79,32 @@ select:hover{
     background-color: #581f85;
     transition: 0.5s;
 }
+
+@media (max-width: 480px) {
+    .dificuldade-container h1 {
+        font-size: 20px; 
+    }
+
+    #select-botao {
+        flex-direction: column; /* Mudando a direção para coluna para alinhamento vertical */
+    }
+
+    .button-container {
+        width: 80%; /* Ajuste da largura do botão para 90% da tela */
+    }
+
+    .select-container {
+        width: 80%; /* Ajuste da largura do select para 90% da tela */
+    }
+
+    select {
+        width: 100%;
+        height: 50px; /* Mantém a altura do select menor */
+    }
+
+    button {
+        width: 80%; /* A largura do botão será 100% do container */
+        height: 50px; /* Mantém a altura do botão menor */
+        font-size: 12px; /* Diminui ainda mais o tamanho da fonte do botão */
+    }
+}

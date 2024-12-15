@@ -83,7 +83,7 @@ select:hover{
 
 /* Responsividade para dispositivos menores (max-width: 480px) */
 @media (max-width: 480px) {
-    .dificuldade-container h1 {
+    .tema-container h1 {
         font-size: 20px; 
     }
 
