@@ -81,4 +81,41 @@ button {
         justify-content: center;
         align-items: center;
         width: 100%;
- 
+    }
+
+    .select-container,
+    .button-container {
+        width: 80%;
+    }
+
+    select {
+        width: 90%;
+        height: 50px;
+    }
+
+    button {
+        width: 90%; /* A largura será igual para ambos os botões */
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dificuldade-container h1 {
+        font-size: 28px;
+    }
+
+    .select-container,
+    .button-container {
+        width: 90%;
+    }
+
+    select {
+        width: 90%;
+        height: 50px;
+    }
+
+    button {
+        width: 90%; /* A largura será igual para ambos os botões */
+        height: 50px;
+    }
+}
