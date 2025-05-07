@@ -1,4 +1,4 @@
-Aplicativo de Geração de Arte com Inteligência Artificial
+# 🎨 Aplicativo de Geração de Arte com Inteligência Artificial
 
 Este projeto foi desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) no curso de Bacharelado em Sistemas de Informação. O objetivo principal é explorar como a inteligência artificial pode ser utilizada para **estimular a criatividade de artistas**, oferecendo sugestões personalizadas com base em preferências e temas selecionados.
 
